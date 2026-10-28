@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alcheste Sustentável 2027</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CABEÇALHO -->
+<header>
+  <div class="header-top">
+    <h1>🌱 Alcheste Sustentável 2027</h1>
+    <button id="btn-theme" onclick="toggleTheme()">🌙</button>
+  </div>
+  <p>EE Alcheste de Godoy Andia - Santa Bárbara d'Oeste - Projeto 2027</p>
+  
+  <!-- MENU DE ABAS -->
+  <nav class="tabs">
+    <button class="tab-btn active" onclick="abrirAba(event, 'inicio')">Início</button>
+    <button class="tab-btn" onclick="abrirAba(event, 'cores')">Cores</button>
+    <button class="tab-btn" onclick="abrirAba(event, 'quiz')">Quiz</button>
+    <button class="tab-btn" onclick="abrirAba(event, 'mecanismo')">Mecanismo</button>
+    <button class="tab-btn" onclick="abrirAba(event, 'beneficios')">Benefícios</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ABA 1: INÍCIO -->
+  <section id="inicio" class="aba active">
+    <h2>Bem-vindo ao Alcheste Sustentável</h2>
+    <p>Este site é o coração do nosso projeto para o ano letivo de 2027. Nosso objetivo é simples e ousado: transformar a EE Alcheste de Godoy Andia na primeira escola <strong>Zero Lixo</strong> de Santa Bárbara d'Oeste.</p>
+    
+    <h3>Como vai funcionar?</h3>
+    <p>Não é só jogar lixo na lixeira certa. É um sistema de pontos: cada sala separa seu resíduo, traz até o Ecoponto no pátio, registra aqui no site e acumula pontos no ranking oficial de 2027. No final do bimestre, a sala campeã ganha prêmios.</p>
+
+    <h3>Afinal, o que é reciclagem?</h3>
+    <p>Muita gente acha que reciclar é só separar. Na verdade, é um ciclo. Reciclagem é pegar um material que já foi usado (como uma garrafa PET), transformar ele em matéria-prima nova e criar um produto completamente diferente. É diferente de reutilizar, que é usar o mesmo objeto de novo.</p>
+    <p><strong>Por exemplo:</strong> 1 tonelada de papel reciclado evita o corte de 20 árvores adultas e economiza 22 mil litros de água. 1kg de plástico reciclado economiza 1,5kg de petróleo.</p>
+
+    <h3>Por que precisamos disso agora?</h3>
+    <div class="info-box">
+      <ul>
+        <li>🇧🇷 O Brasil gera 80 milhões de toneladas de lixo por ano, e só 4% é reciclado</li>
+        <li>🏫 Cada aluno gera em média 0,130kg de lixo por dia dentro da escola</li>
+        <li>📦 71,6% das escolas brasileiras são consideradas grandes geradoras, com mais de 120L de lixo por dia</li>
+        <li>📊 Na escola, o maior resíduo é orgânico (15,37 kg/dia), depois papel (4,59 kg/dia) e plástico (2,03 kg/dia)</li>
+        <li>💡 Menos de 10% das escolas no país têm educação ambiental de verdade na grade</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABA 2: CORES -->
+  <section id="cores" class="aba">
+    <h2>Guia Definitivo das Cores</h2>
+    <p>Siga essa tabela à risca. Se errar a cor, todo o saco vai para o aterro.</p>
+
+    <div class="grid-cores">
+      <!-- AZUL -->
+      <div class="box">
+        <h3 class="azul">🔵 AZUL - Papel e Papelão</h3>
+        <table><tr><th>✅ PODE</th><th>❌ NÃO PODE</th></tr><tr><td>Caderno, livro, sulfite, caixa de sapato, papelão</td><td>Papel higiênico, guardanapo sujo, papel carbono, foto, adesivo</td></tr></table>
+        <p class="dica">💡 Dica: Rasgue, tire o grampo e amasse. Papel molhado ou engordurado não recicla.</p>
+      </div>
+      <!-- VERMELHO -->
+      <div class="box">
+        <h3 class="vermelho">🔴 VERMELHO - Plástico</h3>
+        <table><tr><th>✅ PODE</th><th>❌ NÃO PODE</th></tr><tr><td>Garrafa PET, tampa, pote de margarina limpo, sacola, caneta sem tinta</td><td>Embalagem com comida, fralda, cabo de panela, espuma</td></tr></table>
+        <p class="dica">💡 Dica: Lave com água de reuso e amasse para ocupar menos espaço.</p>
+      </div>
+      <!-- VERDE -->
+      <div class="box">
+        <h3 class="verde">🟢 VERDE - Vidro</h3>
+        <table><tr><th>✅ PODE</th><th>❌ NÃO PODE</th></tr><tr><td>Garrafa de suco, vidro de conserva, perfume</td><td>Espelho, lâmpada, box de banheiro, vidro temperado</td></tr></table>
+        <p class="dica">💡 Dica: Quebrou? Enrole em jornal e escreva CUIDADO VIDRO para não machucar quem coleta.</p>
+      </div>
+      <!-- AMARELO -->
+      <div class="box">
+        <h3 class="amarelo">🟡 AMARELO - Metal</h3>
+        <table><tr><th>✅ PODE</th><th>❌ NÃO PODE</th></tr><tr><td>Latinha, tampa de garrafa, clipes, arame, panela velha</td><td>Pilha, bateria, lata de tinta, lata de aerossol</td></tr></table>
+        <p class="dica">💡 Dica: Metal vale dinheiro. 30 latinhas já compram uma lixeira nova.</p>
+      </div>
+      <!-- MARROM -->
+      <div class="box">
+        <h3 class="marrom">🟤 MARROM - Orgânico</h3>
+        <table><tr><th>✅ PODE</th><th>❌ NÃO PODE</th></tr><tr><td>Casca de fruta, resto de verdura, pó de café, casca de ovo</td><td>Carne, resto de comida temperada, óleo</td></tr></table>
+        <p class="dica">💡 Dica: Esse vai para nossa composteira e vira adubo para a horta da escola.</p>
+      </div>
+      <!-- CINZA -->
+      <div class="box">
+        <h3 class="cinza">⚫ CINZA - Rejeito</h3>
+        <table><tr><th>✅ PODE (só se não recicla mesmo)</th><th></th></tr><tr><td>Chiclete, esponja de pia, etiqueta adesiva, bitucas</td><td></td></tr></table>
+        <p class="dica">💡 Dica: Se ficou na dúvida e está sujo/gorduroso, joga aqui.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABA 3: QUIZ -->
+  <section id="quiz" class="aba">
+    <h2>🧠 Quiz Oficial</h2>
+    <p>Teste seus conhecimentos e ganhe pontos para sua sala. Se fechar a página, o progresso reinicia.</p>
+    <div id="quiz-container"></div>
+    <p class="contador">Pontos acumulados: <span id="pontos-quiz">0</span></p>
+  </section>
+
+  <!-- ABA 4: MECANISMO -->
+  <section id="mecanismo" class="aba">
+    <h2>⚙️ Mecanismo de Funcionamento 2027</h2>
+    <p>Como cada turma vai participar no ano que vem:</p>
+    
+    <div class="cards-mecanismo">
+      <div class="card-interno"><h4>6º ao 9º Ano (Fundamental II)</h4><p>Foco em <strong>Limpeza e Reciclagem</strong>. Vão fiscalizar se a sala ficou limpa no final do dia e pesar o papel/plástico da semana. Ideal para criar o hábito.</p></div>
+      <div class="card-interno"><h4>1º Ano (A, B, C)</h4><p>Foco em <strong>Coleta de Óleo e Orgânico</strong>. Vão trazer óleo de casa e cascas de fruta para a composteira. 1L de óleo contamina 25 mil litros de água.</p></div>
+      <div class="card-interno"><h4>2º e 3º ADM</h4><p>Foco em <strong>Gestão Financeira</strong>. Vão administrar o dinheiro arrecadado com a venda do reciclável e criar o Brechó de uniformes.</p></div>
+      <div class="card-interno"><h4>2º e 3º DS</h4><p>Foco em <strong>Tecnologia</strong>. Vão cuidar deste site, criar planilhas do ranking e organizar coleta de lixo eletrônico e tampinhas.</p></div>
+      <div class="card-interno"><h4>2º e 3º FM</h4><p>Foco em <strong>Projetos Criativos</strong>. Vão transformar reciclável em arte, maquiagem vencida em tinta e criar campanhas de conscientização.</p></div>
+    </div>
+
+    <h3 style="margin-top:20px;">Registrar Pontuação</h3>
+    <div class="form-ranking">
+      <select id="sala">
+        <optgroup label="Fundamental"><option>6º A</option><option>6º B</option><option>7º A</option><option>7º B</option><option>8º A</option><option>8º B</option><option>9º A</option><option>9º B</option></optgroup>
+        <optgroup label="1º Ano"><option>1º A</option><option>1º B</option><option>1º C</option></optgroup>
+        <optgroup label="2º Ano"><option>2º ADM</option><option>2º DS</option><option>2º FM</option></optgroup>
+        <optgroup label="3º Ano"><option>3º ADM</option><option>3º DS</option><option>3º FM</option></optgroup>
+      </select>
+      <select id="categoria">
+        <option value="reciclagem">Reciclagem (kg)</option>
+        <option value="limpeza">Limpeza (nota)</option>
+        <option value="projeto">Projeto Sustentável</option>
+        <option value="tarefa">Tarefa Concluída (+15 pts)</option>
+      </select>
+      <input type="number" id="valorCat" placeholder="Qtd">
+      <button class="btn-acao" onclick="registrarPorSala()">Registrar</button>
+    </div>
+    <ul id="ranking"></ul>
+  </section>
+
+  <!-- ABA 5: BENEFÍCIOS -->
+  <section id="beneficios" class="aba">
+    <h2>Quais os Benefícios para Todos?</h2>
+    <p>Quando a gente recicla, o benefício não é só ambiental. É uma corrente que ajuda todo mundo.</p>
+
+    <div class="beneficios-grid">
+      <div class="card-beneficio">
+        <h4>💰 Financeiro - Para a Escola</h4>
+        <p>O dinheiro da venda de papelão, plástico e latinhas não vai para o lixo. Ele vira: compra de papel higiênico, tinta para impressora, novas lixeiras coloridas, material para a horta e o prêmio para a sala campeã. A escola economiza e ainda lucra.</p>
+      </div>
+      <div class="card-beneficio">
+        <h4>📚 Educacional - Para os Alunos</h4>
+        <p>Você aprende na prática. ADM aprende a gerir dinheiro, DS aprende a programar o site e planilhas, FM aprende design e campanhas. A escola vira referência na Diretoria de Ensino e todos ganham pontos em projetos e currículo.</p>
+      </div>
+      <div class="card-beneficio">
+        <h4>🌍 Ambiental - Para o Planeta</h4>
+        <p>Menos lixo no aterro de Santa Bárbara, menos bicho, menos cheiro, menos entupimento de bueiro. Reciclando, economizamos água, energia e petróleo. Nossa horta cresce com adubo natural da composteira.</p>
+      </div>
+      <div class="card-beneficio">
+        <h4>❤️ Social - Para a Comunidade</h4>
+        <p>Ajudamos as cooperativas de catadores da cidade, que vivem da reciclagem. Formamos cidadãos mais conscientes que vão levar isso para casa. E deixamos um pátio mais limpo e agradável para todos estudarem.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+/* =========================================
+   ALCHESTE SUSTENTÁVEL 2027 - VERSÃO FINAL
+   Organizado por seções
+   ========================================= */
+
+/* ----- 1. VARIÁVEIS DE COR (TEMA) ----- */
+:root {
+  --bg: #f0f7f0;
+  --card: #ffffff;
+  --text: #333333;
+  --header: #2e7d32;
+  --border: #e0e0e0;
+}
+
+body.dark {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #e0e0e0;
+  --header: #1b5e20;
+  --border: #333333;
+}
+
+/* ----- 2. RESET E BASE ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+  line-height: 1.6;
+}
+
+/* ----- 3. CABEÇALHO E MENU ----- */
+header {
+  background: var(--header);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header-top h1 {
+  width: 100%;
+  text-align: center;
+}
+
+#btn-theme {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: white;
+  color: var(--header);
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tabs {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.tab-btn {
+  border: none;
+  background: rgba(255,255,255,0.25);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: white;
+  color: var(--header);
+  font-weight: bold;
+}
+
+/* ----- 4. CONTEÚDO DAS ABAS ----- */
+.aba {
+  display: none;
+  background: var(--card);
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  border: 1px solid var(--border);
+}
+
+.aba.active { display: block; }
+.aba h2 { color: var(--header); margin-bottom: 10px; }
+.aba h3 { margin-top: 15px; margin-bottom: 5px; }
+
+/* ----- 5. SEÇÃO CORES ----- */
+.grid-cores {
+  display: grid;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.box {
+  border: 1px solid var(--border);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.box table {
+  width: 100%;
+  margin: 8px 0;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.box table th {
+  text-align: left;
+  background: var(--bg);
+  padding: 5px;
+}
+
+.box table td {
+  padding: 5px;
+  border-top: 1px solid var(--border);
+}
+
+.dica {
+  margin-top: 8px;
+  background: var(--bg);
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+
+/* Cores das lixeiras */
+.azul { color: #1976d2; } .vermelho { color: #d32f2f; } .verde { color: #388e3c; }
+.amarelo { color: #f9a825; } .marrom { color: #795548; } .cinza { color: #616161; }
+body.dark .azul { color: #64b5f6; } body.dark .vermelho { color: #ef5350; } body.dark .verde { color: #81c784; }
+body.dark .amarelo { color: #ffd54f; }
+
+/* ----- 6. CAIXAS E CARDS ----- */
+.info-box {
+  background: #fff8e1;
+  color: #333;
+  border-left: 5px solid #ffb300;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+body.dark .info-box { background: #3e2723; color: #ffcc80; }
+
+.cards-mecanismo, .beneficios-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.card-interno, .card-beneficio {
+  background: var(--bg);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* ----- 7. FORMULÁRIOS, QUIZ E RANKING ----- */
+.form-ranking {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+
+.form-ranking select, .form-ranking input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  flex: 1;
+  background: var(--card);
+  color: var(--text);
+}
+
+.btn-acao {
+  background: var(--header);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#quiz-container button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+  margin: 6px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.correto { background: #4caf50 !important; color: white !important; }
+.errado { background: #ef5350 !important; color: white !important; }
+
+#ranking { list-style: none; margin-top: 10px; }
+#ranking li {
+  background: var(--bg);
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--border);
+}
+
+.contador {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 10px;
+  background: var(--bg);
+  border-radius: 8px;
+}
+
+/* ----- 8. RESPONSIVO ----- */
+@media (min-width: 750px) {
+  .grid-cores { grid-template-columns: 1fr 1fr; }
+  .beneficios-grid { grid-template-columns: 1fr 1fr; }
+}
